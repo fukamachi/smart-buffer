@@ -1,5 +1,5 @@
 #|
-  This file is a part of smart-io project.
+  This file is a part of smart-buffer project.
   Copyright (c) 2015 Eitaro Fukamachi (e.arrows@gmail.com)
 |#
 
@@ -8,11 +8,11 @@
 |#
 
 (in-package :cl-user)
-(defpackage smart-io-asd
+(defpackage smart-buffer-asd
   (:use :cl :asdf))
-(in-package :smart-io-asd)
+(in-package :smart-buffer-asd)
 
-(defsystem smart-io
+(defsystem smart-buffer
   :version "0.1"
   :author "Eitaro Fukamachi"
   :license "BSD 3-Clause"
@@ -21,7 +21,7 @@
                :uiop)
   :components ((:module "src"
                 :components
-                ((:file "smart-io"))))
+                ((:file "smart-buffer"))))
   :description ""
   :long-description
   #.(with-open-file (stream (merge-pathnames

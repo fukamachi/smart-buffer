@@ -1,11 +1,11 @@
-# smart-io
+# smart-buffer
 
-Smart-io provides an output buffer which changes the destination depending on content size.
+Smart-buffer provides an output buffer which changes the destination depending on content size.
 
 * In-memory buffer for small data
 * Temporary files on disk for big data
 
-In-memory buffer is fast to read/write, however, it consumes much memory if the data can be large. On the other hand, files on disk are slower. Smart-io would be useful when the buffer must satisfy these two contradicting demands.
+In-memory buffer is fast to read/write, however, it consumes much memory if the data can be large. On the other hand, files on disk are slower. Smart-buffer would be useful when the buffer must satisfy these two contradicting demands.
 
 ## Usage
 

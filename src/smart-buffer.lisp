@@ -1,5 +1,5 @@
 (in-package :cl-user)
-(defpackage smart-io
+(defpackage smart-buffer
   (:use #:cl
         #:xsubseq)
   (:export #:*default-memory-limit*
@@ -12,7 +12,7 @@
            #:with-smart-buffer
 
            #:buffer-limit-exceeded))
-(in-package :smart-io)
+(in-package :smart-buffer)
 
 (defvar *default-memory-limit* (expt 2 20))
 (defvar *default-disk-limit* (expt 2 30))
