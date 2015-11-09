@@ -22,7 +22,7 @@
   :components ((:module "src"
                 :components
                 ((:file "smart-buffer"))))
-  :description ""
+  :description "Smart octets buffer"
   :long-description
   #.(with-open-file (stream (merge-pathnames
                              #p"README.markdown"
