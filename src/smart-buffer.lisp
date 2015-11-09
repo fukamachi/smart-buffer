@@ -3,7 +3,7 @@
   (:use #:cl
         #:xsubseq)
   (:export #:*default-memory-limit*
-           #:default-disk-limit*
+           #:*default-disk-limit*
 
            #:smart-buffer
            #:make-smart-buffer
