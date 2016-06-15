@@ -1,5 +1,8 @@
 # smart-buffer
 
+[![Build Status](https://travis-ci.org/fukamachi/smart-buffer.svg?branch=master)](https://travis-ci.org/fukamachi/smart-buffer)
+[![Coverage Status](https://coveralls.io/repos/fukamachi/smart-buffer/badge.svg?branch=master)](https://coveralls.io/r/fukamachi/smart-buffer)
+
 Smart-buffer provides an output buffer which changes the destination depending on content size.
 
 * In-memory buffer for small data
