@@ -10,6 +10,7 @@
            #:write-to-buffer
            #:finalize-buffer
            #:with-smart-buffer
+           #:buffer-on-memory-p
 
            #:buffer-limit-exceeded))
 (in-package :smart-buffer)
