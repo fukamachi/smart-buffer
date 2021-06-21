@@ -8,9 +8,10 @@
            #:smart-buffer
            #:make-smart-buffer
            #:write-to-buffer
-           #:finalize-buffer
+           #:buffer-to-stream
            #:with-smart-buffer
            #:buffer-on-memory-p
+           #:delete-stream-file
 
            #:buffer-limit-exceeded))
 (in-package :smart-buffer)
@@ -78,7 +79,7 @@
              (buffer-current-len buffer)))
      (error 'buffer-limit-exceeded :limit (buffer-disk-limit buffer)))))
 
-(defun finalize-buffer (buffer)
+(defun buffer-to-stream (buffer)
   (if (buffer-on-memory-p buffer)
       (flex:make-in-memory-input-stream
        (typecase (buffer-memory-buffer buffer)
@@ -92,4 +93,9 @@
                              &body body)
   `(let ((,buffer (make-smart-buffer :memory-limit ,memory-limit :disk-limit ,disk-limit)))
      ,@body
-     (finalize-buffer ,buffer)))
+     (buffer-to-stream ,buffer)))
+
+(defun delete-stream-file (stream)
+  (when (typep stream 'file-stream)
+    (ignore-errors (delete-file (pathname stream))))
+  (values))
