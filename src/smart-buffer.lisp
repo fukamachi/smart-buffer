@@ -111,5 +111,5 @@
   (let ((now (get-universal-time)))
     (mapc #'uiop:delete-file-if-exists
           (remove-if-not (lambda (file)
-                           (< before (- now (file-write-date file))))
+                           (< stale-seconds (- now (file-write-date file))))
                          (uiop:directory-files *temporary-directory*)))))
